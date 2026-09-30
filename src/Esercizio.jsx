@@ -12,18 +12,20 @@ export default function Esercizio({ titolo, testo, bonus }) {
     });
 
 
+    // derived-state per ottenere i caratteri digitati
+    const usedChars = inputText.length;
 
     useEffect(() => {
         // salvataggio in Local Storage di dati provenienti da textarea 
         localStorage.setItem('user-notes', JSON.stringify(inputText));
-    }, [inputText])
+
+        document.title = `Caratteri ${usedChars}`;
+    }, [inputText, usedChars])
 
     function handleText(e) {
         setInputText(e.target.value);
     }
 
-    // derived-state per ottenere i caratteri digitati
-    const usedChars = inputText.length;
 
     return (
         <div>
@@ -34,9 +36,9 @@ export default function Esercizio({ titolo, testo, bonus }) {
                 {bonus && <p><span className="fw-bold">Bonus:</span> {bonus}</p>}
             </div>
 
-            <Notepad function={handleText}
+            <Notepad fx={handleText}
                 characters={usedChars}
-                value={inputText} />
+                valueState={inputText} />
         </div>
     )
 }
