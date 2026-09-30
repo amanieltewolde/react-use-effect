@@ -1,4 +1,4 @@
-export const listaExercises = [
+export const listExercises = [
     {
         esercizio: 1,
         titolo: '1. Blocco note persistente',

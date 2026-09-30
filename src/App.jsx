@@ -1,5 +1,5 @@
-import Esercizio from "./Esercizio";
-import { listaExercises } from "./utilities/Lista-esercizi";
+import Ex1 from "./Ex-Completed/Ex1";
+import Ex2 from "./Ex2";
 
 export default function App() {
 
@@ -7,10 +7,9 @@ export default function App() {
   return (
     <>
       <h2 className="display-1 text-center">React useEffect</h2>
-      <Esercizio key={listaExercises[0].esercizio}
-        titolo={listaExercises[0].titolo}
-        testo={listaExercises[0].testo}
-        bonus={listaExercises[0].bonus} />
+      <Ex1 />
+      <Ex2 />
+
     </>
   )
 }
