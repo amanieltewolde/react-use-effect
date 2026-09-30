@@ -3,13 +3,17 @@ import { useState } from "react"
 
 export default function Esercizio({ titolo, testo, bonus }) {
 
-    const [inputText, setInputText] = useState('');
+    const [inputText, setInputText] = useState(() => {
 
-    // const savedUserNotes = JSON.parse(localStorage.getItem('user-notes'));
+        // recupero dati da LocalStorage, SE presenti
+        const savedUserNotes = JSON.parse(localStorage.getItem('user-notes'));
+        return savedUserNotes ? savedUserNotes : '';
+    });
+
 
 
     useEffect(() => {
-
+        // salvataggio in Local Storage di dati provenienti da textarea 
         localStorage.setItem('user-notes', JSON.stringify(inputText));
     }, [inputText])
 
