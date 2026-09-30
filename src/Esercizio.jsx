@@ -21,6 +21,8 @@ export default function Esercizio({ titolo, testo, bonus }) {
         setInputText(e.target.value);
     }
 
+    // derived-state per ottenere i caratteri digitati
+    const usedChars = inputText.length;
 
     return (
         <div>
@@ -36,6 +38,7 @@ export default function Esercizio({ titolo, testo, bonus }) {
                     Blocco note
                 </label>
                 <textarea value={inputText} onChange={handleText} id="notes" placeholder="Scrivi le tue note qui..." className="form-control"></textarea>
+                <div className="form-text text-end">Caratteri usati {usedChars} </div>
             </div>
         </div>
     )
