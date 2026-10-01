@@ -1,5 +1,5 @@
 import Ex1 from "./Ex-Completed/Ex1";
-import Ex2 from "./Ex2";
+import Ex2 from "./Ex-Completed/Ex2";
 import './index.css'
 
 export default function App() {
