@@ -1,5 +1,6 @@
 import Ex1 from "./Ex-Completed/Ex1";
 import Ex2 from "./Ex-Completed/Ex2";
+import Ex3 from "./Ex3";
 import './index.css'
 
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
       <h2 className="display-1 text-center">React useEffect</h2>
       <Ex1 />
       <Ex2 />
+      <Ex3 />
 
     </>
   )
