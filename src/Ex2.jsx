@@ -1,8 +1,11 @@
+import { useState } from "react";
 import ThemeToggle from "./component/ThemeToggle";
 import Esercizio from "./Exercise Scheme/Esercizio";
 import { listExercises } from "./utilities/Lista-esercizi";
 
 export default function Ex2() {
+
+    const [isVisible, setIsVisible] = useState(false)
     return (
         <>
             <Esercizio
@@ -10,7 +13,7 @@ export default function Ex2() {
                 testo={listExercises[1].testo}
                 bonus={listExercises[1].bonus} />
 
-            <ThemeToggle />
+            {isVisible && <ThemeToggle />}
 
         </>
     )
