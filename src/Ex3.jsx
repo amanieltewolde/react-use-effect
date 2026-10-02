@@ -32,23 +32,6 @@ export default function Ex3() {
 
 
 
-    function getCurrentBreakpoint() {
-
-        if (windowSize.width < 768) {
-            const breakpoint = 'Mobile';
-            return breakpoint
-        } else if (windowSize.width >= 768 && windowSize.width < 992) {
-            const breakpoint = 'Tablet';
-            return breakpoint
-        } else {
-            const breakpoint = 'Desktop';
-            return breakpoint
-        }
-    }
-
-    const currentBreakpoint = getCurrentBreakpoint();
-
-
 
     return (
         <>
@@ -57,6 +40,7 @@ export default function Ex3() {
                 testo={listExercises[2].testo}
                 bonus={listExercises[2].bonus} />
 
+<<<<<<< HEAD
             <div className="my-3 d-flex justify-content-center align-items-center gap-5">
 
                 <div className="card p-3 border border-4 rounded-4 w-25">
@@ -72,8 +56,17 @@ export default function Ex3() {
                 </div>
 
 
+=======
+>>>>>>> parent of 586b219 (function to get current breakpoint)
 
+            <div className="card p-3 border border-4 rounded-4 w-25">
+                <h3>Windows Size</h3>
+                <h5 className="card-title">Heigth</h5>
+                <p className="card-text">{windowSize.heigth} px</p>
+                <h5 className="card-title">Width</h5>
+                <p className="card-text">{windowSize.width} px</p>
             </div>
+
 
         </>
     )
