@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Esercizio from "./Exercise Scheme/Esercizio";
-import { listExercises } from "./utilities/Lista-esercizi";
+import Esercizio from "../Exercise Scheme/Esercizio";
+import { listExercises } from "../utilities/Lista-esercizi";
 
 export default function Ex3() {
 
@@ -55,25 +55,22 @@ export default function Ex3() {
             <Esercizio
                 titolo={listExercises[2].titolo}
                 testo={listExercises[2].testo}
-                bonus={listExercises[2].bonus} />
+                bonus={listExercises[2].bonus}>
 
-            <div className="my-3 d-flex justify-content-center align-items-center gap-5">
 
-                <div className="card p-3 border border-4 rounded-4 w-25">
-                    <h3>Windows Size</h3>
-                    <h5 className="card-title">Heigth</h5>
-                    <p className="card-text">{windowSize.heigth} px</p>
-                    <h5 className="card-title">Width</h5>
-                    <p className="card-text">{windowSize.width} px</p>
+                <div className="my-3 d-flex justify-content-center align-items-center gap-5">
+                    <div className="card text-center p-3 border border-4 rounded-4 w-25">
+                        <h3>Windows Size</h3>
+                        <h5 className="card-title">Heigth</h5>
+                        <p className="card-text">{windowSize.heigth} px</p>
+                        <h5 className="card-title">Width</h5>
+                        <p className="card-text">{windowSize.width} px</p>
+                    </div>
+                    <div className="badge d-flex gap-2 fs-3 bg-primary">
+                        {currentBreakpoint}
+                    </div>
                 </div>
-
-                <div className="badge d-flex gap-2 fs-3 bg-primary">
-                    {currentBreakpoint}
-                </div>
-
-
-
-            </div>
+            </Esercizio>
 
         </>
     )

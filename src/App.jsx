@@ -1,6 +1,6 @@
 import Ex1 from "./Ex-Completed/Ex1";
 import Ex2 from "./Ex-Completed/Ex2";
-import Ex3 from "./Ex3";
+import Ex3 from "./Ex-Completed/Ex3";
 import './index.css'
 
 export default function App() {
