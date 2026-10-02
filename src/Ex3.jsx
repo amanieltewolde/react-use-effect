@@ -23,7 +23,13 @@ export default function Ex3() {
 
         // Ascolto dell'evento resize sulla finestra
         window.addEventListener('resize', handleWindowResize)
-    }, [windowSize])
+
+        // Gestione del Unmounted 
+        return () => window.removeEventListener('resize', handleWindowResize)
+
+
+    }, [])
+
 
 
     function getCurrentBreakpoint() {
@@ -62,9 +68,7 @@ export default function Ex3() {
                 </div>
 
                 <div className="badge d-flex gap-2 fs-3 bg-primary">
-
                     {currentBreakpoint}
-
                 </div>
 
 
